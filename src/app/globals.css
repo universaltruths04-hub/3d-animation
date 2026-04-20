@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: rgb(255 255 255);
+  --foreground: rgb(37 37 37);
+  --primary: rgb(52 52 52);
+  --secondary: rgb(247 247 247);
+  --accent: rgb(247 247 247);
+  --card: rgb(255 255 255);
+  --border: rgb(235 235 235);
+}
+
+/* Custom Theme Overrides */
+
+[data-theme='dark-luxury'] {
+  --background: 10 10 10;
+  --foreground: 255 255 255;
+  --primary: 212 175 55;
+  --secondary: 247 231 206;
+  --accent: 106 13 173;
+  --card: 26 26 26;
+  --border: 212 175 55;
+}
+
+[data-theme='joyful-bloom'] {
+  --background: 255 245 248;
+  --foreground: 51 51 51;
+  --primary: 255 105 180;
+  --secondary: 64 224 208;
+  --accent: 255 127 80;
+  --card: 255 255 255;
+  --border: 255 105 180;
+}
+
+[data-theme='neo-cosmic'] {
+  --background: 5 5 5;
+  --foreground: 224 224 224;
+  --primary: 0 255 255;
+  --secondary: 255 0 255;
+  --accent: 191 0 255;
+  --card: 10 10 31;
+  --border: 0 255 255;
+}
+
+[data-theme='earthly-serenity'] {
+  --background: 252 251 244;
+  --foreground: 44 62 80;
+  --primary: 46 139 87;
+  --secondary: 245 245 220;
+  --accent: 226 114 91;
+  --card: 240 244 240;
+  --border: 46 139 87;
+}
+
+[data-theme='timeless-glam'] {
+  --background: 253 245 230;
+  --foreground: 26 26 26;
+  --primary: 183 110 121;
+  --secondary: 128 0 32;
+  --accent: 0 128 128;
+  --card: 255 240 245;
+  --border: 183 110 121;
+}
+
+[data-theme='minimal-bloom'] {
+  --background: 255 255 255;
+  --foreground: 74 74 74;
+  --primary: 224 176 255;
+  --secondary: 240 255 240;
+  --accent: 176 196 222;
+  --card: 250 250 250;
+  --border: 224 176 255;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-500;
+  }
+}
